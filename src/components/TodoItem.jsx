@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-export class TodoItem extends Component {
+export default class TodoItem extends Component {
   getStyle = () => {
     return {
       background: '#f4f4f4',
@@ -12,7 +12,7 @@ export class TodoItem extends Component {
   };
 
   render() {
-    const { id, title, completed } = this.props.todo;
+    const { id, title } = this.props.todo;
     return (
       <div style={this.getStyle()}>
         <p>
@@ -44,5 +44,3 @@ const btnStyle = {
   cursor: 'pointer',
   float: 'right',
 };
-
-export default TodoItem;
